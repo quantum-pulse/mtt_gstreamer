@@ -1,5 +1,4 @@
-# mtt_gstreamer
-mtt: media tutorial. 
+# mtt_gstreamer(media tutorial gstreamer)
 This repo is a draft for a project based on gstreamer. 
 
 It implements the tutorial of the official site:
