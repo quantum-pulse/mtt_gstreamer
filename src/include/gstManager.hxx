@@ -4,6 +4,9 @@
 
 #include <gst/gst.h>
 #include <string>
+#include <tools>
+
+std::string urisegment="playbin uri=file://";
 
 class gstManager
 {
@@ -17,9 +20,11 @@ public:
             gst_object_unref(pipeline_);
         }
     }
-
+    
     void init(){
-        pipeline_=gst_parse_launch(dataFile_.c_str(),nullptr);
+        std::string lBuffer=urisegment+dataFile_;
+        rlog_wn(lBuffer);
+        pipeline_=gst_parse_launch(lBuffer.c_str(),nullptr);
     }
 
     void play(){
@@ -30,6 +35,7 @@ public:
     }
 
 private:
+    
     std::string & dataFile_;
     GstElement *pipeline_;
     GstBus *bus_;

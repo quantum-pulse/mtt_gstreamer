@@ -6,7 +6,8 @@
 
 using namespace std;
 
-string gBuffer="playbin uri=https://www.freedesktop.org/software/gstreamer-sdk/data/media/sintel_trailer-480p.webm";
+//string gBuffer="playbin uri=https://www.freedesktop.org/software/gstreamer-sdk/data/media/sintel_trailer-480p.webm";
+string gBuffer="playbin uri=file:///home/gamma/Code/research/video_streaming/samples/502019458_E_cnt_1_r720P.mp4";
 
 int main(int argc,char ** argv)
 {
