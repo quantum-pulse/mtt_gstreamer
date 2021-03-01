@@ -9,7 +9,7 @@ class filesys_mgr
 public:
     filesys_mgr();
     ~filesys_mgr();
-    
+
     bool isRelative(const std::string & _filename);
     bool hasFile(const std::string & _filename);
     std::string operator()();

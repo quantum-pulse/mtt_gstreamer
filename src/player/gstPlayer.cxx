@@ -12,4 +12,4 @@ int main(int argc,char ** argv)
     gst_manager lMediaManager;
     lMediaManager(element);
     lMediaManager.play();
-}   
+}

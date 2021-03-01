@@ -2,7 +2,7 @@
 #include "gst_manager.hxx"
 #include "filesys_mgr.hxx"
 #include <cstdlib>
-#include <tools>
+#include <iostream>
 
 using namespace std;
 
@@ -24,13 +24,13 @@ gst_manager::~gst_manager()
         gst_object_unref(pipeline_);
     }
 }
-    
+
 void gst_manager::operator()(string & _file2watch)
 {
     if(fmgr.isRelative(_file2watch)){
         string currentPath=fmgr();
         string lPathFile=currentPath+token+_file2watch;
-        init(lPathFile);        
+        init(lPathFile);
     }
     else{
         if(fmgr.hasFile(_file2watch)) init(_file2watch);
@@ -38,7 +38,7 @@ void gst_manager::operator()(string & _file2watch)
             //temporary: need to add log lib to log err in file
             cout<<_file2watch+" does not exist"<<endl;
             exit(EXIT_FAILURE);
-        } 
+        }
     }
 }
 

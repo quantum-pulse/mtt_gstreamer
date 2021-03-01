@@ -22,7 +22,7 @@ int main(int argc,char ** argv)
     gstManager lManager(gBuffer);
     lManager.init();
     lManager.play();
-   
+
     /* 
     //Build the pipeline 
     pipeline = gst_parse_launch(gBuffer.c_str(),nullptr);
