@@ -1,9 +1,14 @@
 
 #include "gst_manager.hxx"
+#include "filesys_mgr.hxx"
+#include <cstdlib>
+#include <tools>
 
 using namespace std;
 
 string urisegment="playbin uri=file://";
+char token='/';
+filesys_mgr fmgr;
 
 gst_manager::gst_manager():pipeline_(nullptr),bus_(nullptr),msg_(nullptr)
 {
@@ -22,7 +27,19 @@ gst_manager::~gst_manager()
     
 void gst_manager::operator()(string & _file2watch)
 {
-    init(_file2watch);
+    if(fmgr.isRelative(_file2watch)){
+        string currentPath=fmgr();
+        string lPathFile=currentPath+token+_file2watch;
+        init(lPathFile);        
+    }
+    else{
+        if(fmgr.hasFile(_file2watch)) init(_file2watch);
+        else{
+            //temporary: need to add log lib to log err in file
+            cout<<_file2watch+" does not exist"<<endl;
+            exit(EXIT_FAILURE);
+        } 
+    }
 }
 
 void gst_manager::play()
