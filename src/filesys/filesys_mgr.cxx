@@ -1,21 +1,13 @@
 
 #include "filesys_mgr.hxx"
+#include <filesystem>
 
 using namespace std;
 namespace fs = std::filesystem;
 
-filesys_mgr::filesys_mgr()
-{
-
-}
-
 string filesys_mgr::operator()()
 {
     return getcwd();
-}
-
-filesys_mgr::~filesys_mgr()
-{
 }
 
 bool filesys_mgr::isRelative(const string & _filename)

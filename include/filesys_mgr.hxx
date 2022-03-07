@@ -2,13 +2,11 @@
 #ifndef FILESYS_MGR_HXX
 #define FILESYS_MGR_HXX
 
-#include <filesystem>
+#include <string>
 
 class filesys_mgr
 {
 public:
-    filesys_mgr();
-    ~filesys_mgr();
 
     bool isRelative(const std::string & _filename);
     bool hasFile(const std::string & _filename);
