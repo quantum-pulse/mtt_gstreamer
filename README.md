@@ -7,4 +7,4 @@ https://gstreamer.freedesktop.org/documentation/tutorials/basic/hello-world.html
 Only c++ wrapper are used (:
 
 ## Dependencies
->sudo apt install libglib2.0-dev libgtk-3-dev -y
+>sudo apt install libglib2.0-dev libgtk-3-dev libgstreamermm-1.0-dev -y
