@@ -1,4 +1,7 @@
 # Mtt_gstreamer(media tutorial gstreamer)
+
+<img src="img/streaming.jpg" width="400" height="200">
+
 This repo is a draft for a project based on gstreamer. 
 
 It implements the tutorials of the official site:

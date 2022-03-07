@@ -1,5 +1,5 @@
-cmake_minimum_required(VERSION 3.17.1)
-project(alpha_fds)
+cmake_minimum_required(VERSION 3.22.2)
+project(gst-wrapper)
 
 set (CMAKE_C_FLAGS_INIT                "-Wall -std=c99")
 set (CMAKE_C_FLAGS_DEBUG_INIT          "-g")
